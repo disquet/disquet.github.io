@@ -9,7 +9,9 @@ description: > # description of the site (multiple lines allowed)
 favicon: "" # name+extension of favicon (which must be put on the root folder)
 # goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
 
-pagination: 2
+paginate: 2
+paginate_path: ./page:num/
+  
 theme_config:
   appearance: "light" # can be "light", "dark" or "auto"
   back_home_text: ".." # customize text for homepage link in post layout

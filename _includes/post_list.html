@@ -20,7 +20,7 @@
             {%- else -%}
             <a href="{{ post.url | relative_url }}">
             {%- endif -%}
-                {{ post.title }} <span class="link-info">{{ post.content }}</span>
+                {{ post.title }} <span class="link-info">{{ post | jsonify }}</span>
           </a>
         </li>
     {%- endfor -%}

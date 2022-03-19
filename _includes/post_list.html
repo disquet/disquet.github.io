@@ -20,7 +20,7 @@
             {%- else -%}
               <a href="{{ post.url | relative_url }}">
             {%- endif -%}
-            {{ post.title | downcase }}
+                {{ post.title }} <span class="link-info">{{ post.content | markdownify | strip_html }}</span>
           </a>
         </li>
     {%- endfor -%}

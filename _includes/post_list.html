@@ -21,7 +21,7 @@
             <a href="{{ post.url | relative_url }}">
             {%- endif -%}
                 {{ post.title }} 
-          </a> <span class="link-info">{{ post.content | jsonify }}</span>
+          </a> <span class="link-info">{{ post.content }}</span>
         </li>
     {%- endfor -%}
     {%- if include.show_more and limit_exceeded -%}

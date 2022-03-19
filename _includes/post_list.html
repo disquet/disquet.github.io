@@ -21,7 +21,8 @@
             <a href="{{ post.url | relative_url }}">
             {%- endif -%}
                 {{ post.title }} 
-          </a> <span class="link-info">{{ post.content }}</span>
+          </a> 
+          <div class="link-info">{{ post.content }}</div>
         </li>
     {%- endfor -%}
     {%- if include.show_more and limit_exceeded -%}

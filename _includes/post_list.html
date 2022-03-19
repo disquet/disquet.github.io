@@ -15,7 +15,13 @@
     {%- for post in paginator.posts limit: include.limit -%}
         <li>
           <span>{{- post.date | date: site.theme_config.date_format -}}</span>
-          <a href="{{ post.url | relative_url }}">{{ post.title | downcase }}</a>
+            {%- if posts.link -%}
+              <a href="{{ post.link }}">
+            {%- else -%}
+              <a href="{{ post.url | relative_url }}">
+            {%- endif -%}
+            {{ post.title | downcase }}
+          </a>
         </li>
     {%- endfor -%}
     {%- if include.show_more and limit_exceeded -%}

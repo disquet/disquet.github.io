@@ -12,10 +12,8 @@
 
 {%- if posts.size > 0 -%}
   <ul>
-    {%- for post in paginator.posts limit: include.limit -%}
-    
-    {{post | jsonify}}
-    
+    {%- for post in paginator.posts offset:2 limit: include.limit -%}
+       
         <li>
           <span>{{- post.date | date: site.theme_config.date_format -}}</span>&nbsp;
             {%- if post.link -%}

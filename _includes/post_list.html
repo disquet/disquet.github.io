@@ -14,7 +14,7 @@
   <ul>
     {%- for post in paginator.posts limit: include.limit -%}
     
-    {{paginator.posts | jsonify}}
+    {{post | jsonify}}
     
         <li>
           <span>{{- post.date | date: site.theme_config.date_format -}}</span>&nbsp;
